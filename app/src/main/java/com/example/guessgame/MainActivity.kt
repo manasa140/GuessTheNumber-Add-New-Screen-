@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputLayout
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val clickMeButton = findViewById<TextView>(R.id.AmIRight)
         val result = findViewById<TextView>(R.id.solution)
-        var number: Int = 650
+        var number= Random.nextInt(1,1000)
         var count = 0
 
         clickMeButton.setOnClickListener {
